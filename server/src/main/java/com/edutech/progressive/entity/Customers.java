@@ -1,8 +1,7 @@
 package com.edutech.progressive.entity;
 
 public class Customers implements Comparable<Customers> {
-
-    private int customerId;
+ private int customerId;
     private String name;
     private String email;
     private String username;

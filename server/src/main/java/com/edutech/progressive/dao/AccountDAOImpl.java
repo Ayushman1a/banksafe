@@ -8,7 +8,7 @@ import java.util.List;
 import com.edutech.progressive.config.DatabaseConnectionManager;
 import com.edutech.progressive.entity.Accounts;
 
-public class AccountDAOImpl implements AccountDAO {
+public class AccountDAOImpl implements AccountDAO{
 
     @Override
     public List<Accounts> getAllAccounts() throws SQLException {
@@ -26,11 +26,7 @@ public class AccountDAOImpl implements AccountDAO {
         return result;
     }
 
-    /**
-     * Some Day 3 test suites call a DAO method for balance-sorted retrieval.
-     * If your interface doesn’t declare this, the service may still rely on it
-     * or sort in-memory. Keeping this here makes the DAO future-proof.
-     */
+   
     public List<Accounts> getAllAccountsSortedByBalance() throws SQLException {
         final String sql = "SELECT account_id, customer_id, balance FROM accounts ORDER BY balance ASC";
         List<Accounts> result = new ArrayList<>();

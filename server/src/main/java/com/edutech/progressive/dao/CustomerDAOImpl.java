@@ -1,5 +1,7 @@
 package com.edutech.progressive.dao;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;

@@ -1,8 +1,10 @@
 package com.edutech.progressive.service;
 
-import com.edutech.progressive.entity.Customers;
+
 import java.sql.SQLException;
 import java.util.List;
+
+import com.edutech.progressive.entity.Customers;
 
 public interface CustomerService {
     List<Customers> getAllCustomers() throws SQLException;

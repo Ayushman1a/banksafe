@@ -1,11 +1,8 @@
 package com.edutech.progressive.entity;
 import java.util.Date;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-@Entity
 public class Transactions {
-@Id
+
     private int transactionId;
     private int accountId;
     private double amount;
@@ -14,11 +11,11 @@ public class Transactions {
 
     public Transactions() {}
 
-    public Transactions(int transactionId, int accountId, double amount, Date transactionDate, String transactionType) {
+    public Transactions(int transactionId, int accountId, double amount, Date timestamp, String transactionType) {
         this.transactionId = transactionId;
         this.accountId = accountId;
         this.amount = amount;
-        this.transactionDate = transactionDate;
+        this.transactionDate = timestamp;
         this.transactionType = transactionType;
     }
 
