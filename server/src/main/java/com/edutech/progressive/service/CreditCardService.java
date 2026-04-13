@@ -3,8 +3,10 @@ package com.edutech.progressive.service;
 
 import java.util.List;
 
-import com.edutech.progressive.entity.CreditCard;
+import org.springframework.stereotype.Service;
 
+import com.edutech.progressive.entity.CreditCard;
+@Service
 public class CreditCardService {
 
     public List<CreditCard> getAllCreditCards() {
