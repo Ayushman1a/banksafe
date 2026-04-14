@@ -4,5 +4,4 @@ public class LoginResponse {
    private String token;
    private String roles;
    private Integer userId;
-   //joshi jiii 
 }
