@@ -1,6 +1,5 @@
 package com.edutech.progressive.service.impl;
 
-
 import com.edutech.progressive.entity.Accounts;
 import com.edutech.progressive.exception.AccountNotFoundException;
 import com.edutech.progressive.repository.AccountRepository;
@@ -21,6 +20,7 @@ public class AccountServiceImplJpa implements AccountService {
     TransactionRepository transactionRepository;
 
     private AccountRepository accountRepository;
+
     @Autowired
     public AccountServiceImplJpa(AccountRepository accountRepository) {
         this.accountRepository = accountRepository;
@@ -41,8 +41,7 @@ public class AccountServiceImplJpa implements AccountService {
         Optional<Accounts> accounts = accountRepository.findById(accountId);
         if (accounts.isPresent()) {
             return accounts.get();
-        }
-        else {
+        } else {
             throw new AccountNotFoundException("No accounts found linked with this accountId : " + accountId);
         }
     }

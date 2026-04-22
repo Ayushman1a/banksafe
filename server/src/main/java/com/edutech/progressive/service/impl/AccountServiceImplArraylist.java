@@ -1,11 +1,9 @@
 package com.edutech.progressive.service.impl;
 
-
 import com.edutech.progressive.entity.Accounts;
 import com.edutech.progressive.service.AccountService;
 import org.springframework.stereotype.Service;
 
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
