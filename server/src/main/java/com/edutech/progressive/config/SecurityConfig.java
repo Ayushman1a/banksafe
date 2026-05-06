@@ -4,8 +4,6 @@ import com.edutech.progressive.jwt.JwtRequestFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import org.springframework.http.HttpMethod;
-
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 
@@ -31,7 +29,6 @@ public class SecurityConfig {
 
         http.csrf().disable()
             .authorizeRequests()
-            // ⭐ Day‑12 tests require full access (no JWT)
             .antMatchers("/**").permitAll()
             .anyRequest().authenticated();
 
