@@ -33,7 +33,7 @@ public class TransactionServiceImplJpa implements TransactionService {
     }
 
     @Override
-    public Transactions getTransactionById(int transactionId)throws AccountNotFoundException {
+    public Transactions getTransactionById(int transactionId) {
         return transactionRepository.findById(transactionId).orElse(null);
     }
 
